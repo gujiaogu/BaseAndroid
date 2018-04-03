@@ -1,0 +1,141 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:8905904442719825751",
+      "lastPropertyId": "4:3006174676829083914",
+      "name": "Album",
+      "properties": [
+        {
+          "id": "1:5878827883412605164",
+          "name": "id"
+        },
+        {
+          "id": "2:672074125714158361",
+          "name": "albumName"
+        },
+        {
+          "id": "3:3322862960265158141",
+          "name": "date"
+        },
+        {
+          "id": "4:3006174676829083914",
+          "indexId": "1:239879802469340387",
+          "name": "mySongId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:3101310181500410519",
+      "lastPropertyId": "2:7966199061779201190",
+      "name": "Customer",
+      "properties": [
+        {
+          "id": "1:898831633120615119",
+          "name": "id"
+        },
+        {
+          "id": "2:7966199061779201190",
+          "name": "name"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:6193039738274039234",
+      "lastPropertyId": "2:8477149683721981867",
+      "name": "CustomerMany",
+      "properties": [
+        {
+          "id": "1:5549279783419427513",
+          "name": "id"
+        },
+        {
+          "id": "2:8477149683721981867",
+          "name": "name"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:71492175661121827",
+      "lastPropertyId": "4:1188922790036221698",
+      "name": "MySong",
+      "properties": [
+        {
+          "id": "1:3688093628446657787",
+          "name": "id"
+        },
+        {
+          "id": "2:7856070826847416017",
+          "name": "name"
+        },
+        {
+          "id": "3:6586020797510147286",
+          "name": "author"
+        },
+        {
+          "id": "4:1188922790036221698",
+          "name": "date"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:1510430551339372661",
+      "lastPropertyId": "3:916453780394611896",
+      "name": "Order",
+      "properties": [
+        {
+          "id": "1:1073876917423074976",
+          "name": "id"
+        },
+        {
+          "id": "2:4655192762173745394",
+          "name": "orderName"
+        },
+        {
+          "id": "3:916453780394611896",
+          "indexId": "2:4297006990461886777",
+          "name": "customerId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:146931998082697514",
+      "lastPropertyId": "3:6951219328272964227",
+      "name": "OrderMany",
+      "properties": [
+        {
+          "id": "1:5598529812918714803",
+          "name": "id"
+        },
+        {
+          "id": "2:1396741949027891006",
+          "name": "orderName"
+        },
+        {
+          "id": "3:6951219328272964227",
+          "indexId": "3:5404548921778750177",
+          "name": "customerId"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "6:146931998082697514",
+  "lastIndexId": "3:5404548921778750177",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

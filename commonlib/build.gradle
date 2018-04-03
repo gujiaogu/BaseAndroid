@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "CERT_CLIENT_PASSWORD", "${CERT_CLIENT_PASSWORD}"
+            buildConfigField "String", "CERT_SERVER_PASSWORD", "${CERT_SERVER_PASSWORD}"
+            buildConfigField "String", "CLIENT_STORE_PASSWORD", "${CLIENT_STORE_PASSWORD}"
+            buildConfigField "String", "CLIENT_CERT_PATH", "${CLIENT_CERT_PATH}"
+            buildConfigField "String", "SERVER_CERT_PATH", "${SERVER_CERT_PATH}"
+            buildConfigField "int", "USE_SSL", "${USE_SSL}"
+            buildConfigField "String", "IP", "${IP}"
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "CERT_CLIENT_PASSWORD", "${DEBUG_CERT_CLIENT_PASSWORD}"
+            buildConfigField "String", "CERT_SERVER_PASSWORD", "${DEBUG_CERT_SERVER_PASSWORD}"
+            buildConfigField "String", "CLIENT_STORE_PASSWORD", "${DEBUG_CLIENT_STORE_PASSWORD}"
+            buildConfigField "String", "CLIENT_CERT_PATH", "${DEBUG_CLIENT_CERT_PATH}"
+            buildConfigField "String", "SERVER_CERT_PATH", "${DEBUG_SERVER_CERT_PATH}"
+            buildConfigField "int", "USE_SSL", "${DEBUG_USE_SSL}"
+            buildConfigField "String", "IP", "${DEBUG_IP}"
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.github.bumptech.glide:glide:4.4.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'com.squareup.okio:okio:1.13.0'
+    implementation 'com.android.support:design:26.1.0'
+    compile 'com.liulishuo.filedownloader:library:1.6.8'
+    compile'cn.dreamtobe.filedownloader:filedownloader-okhttp3-connection:1.0.0'
+}

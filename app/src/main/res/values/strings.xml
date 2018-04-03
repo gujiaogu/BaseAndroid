@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BaseAndroid</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
